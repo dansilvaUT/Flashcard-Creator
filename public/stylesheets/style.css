@@ -1,0 +1,24 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #b1b4b5 url('../images/study-landing.jpg') no-repeat fixed center;
+    background-size: cover;
+}
+
+.app-desc {
+    background-color: rgba(177, 179, 181,.5);
+    border-radius: 10px;
+    max-width: 50%;
+}
+
+.icons {
+    font-size: 90px;
+}
+
+@media only screen and (max-width: 1000px) {
+    .app-desc {
+        max-width: 100%;
+    }
+  }

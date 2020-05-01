@@ -5,20 +5,129 @@
 body {
     background: #b1b4b5 url('../images/study-landing.jpg') no-repeat fixed center;
     background-size: cover;
+    letter-spacing: 1.3px;
+}
+
+nav {
+    background-color:#cc942d;
+}
+
+nav a {
+    color: #fff;
+    font-weight: 700;
+}
+
+.main-content {
+    padding-top: 70px;
+    padding-bottom: 30px;
+}
+
+.index-jumb {
+    max-width: 75%;
+    margin: 15px auto;
 }
 
 .app-desc {
-    background-color: rgba(177, 179, 181,.5);
+    background-color: rgba(24, 51, 58, .7);
     border-radius: 10px;
     max-width: 50%;
+    color:white;
+}
+
+.app-desc .container {
+    margin: 15px 0;
+    padding: 10px;
+}
+
+.step-one h3,
+.step-one .icons,
+.step-three h3,
+.step-three .icons {
+    float: left;
+}
+
+.step-two h3,
+.step-two .icons {
+    float: right;
 }
 
 .icons {
     font-size: 90px;
 }
 
+.btn-container {
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    max-width: 50%;
+}
+
+.sign-up-btn,
+.login-btn {
+    padding: 10px 30px;
+    margin: 5px;
+    width: 100%;
+}
+
+.login-btn {
+    background-color: #2dcc77;
+    border-color: #2dcc77;
+}
+
+.login-btn:hover {
+    background-color: #09ad56;
+    border-color: #09ad56;
+}
+
+.sign-up-btn {
+    background-color: #2daacc;
+    border-color:#2daacc;
+}
+
+.sign-up-btn:hover {
+    background-color: #0697bf;
+    border-color: #0697bf;
+}
+/*
+
+    ERROR STYLES
+
+*/
+.error-content {
+    text-align: center;
+    background-color: rgba(144, 151, 158, .7);
+    padding: 15px;
+    margin-top: 20px;
+    max-width: 60%;
+}
+
+.error-icon {
+    font-size: 100px;
+    color: #bd4b4b;
+}
+
+.error-button {
+    display: block;
+}
+/*
+
+    END ERROR STYLES
+
+*/
+
+.footer {
+    text-align: center;
+}
+
+.text-muted p {
+    color: #fff;
+}
+
 @media only screen and (max-width: 1000px) {
-    .app-desc {
+    .app-desc,
+    .error-content,
+    .index-jumb,
+    .btn-container {
         max-width: 100%;
     }
   }

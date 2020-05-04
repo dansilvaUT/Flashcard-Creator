@@ -1,13 +1,20 @@
 const express = require('express');
 const router = express.Router();
-const { data } = require('../data/flashcard-data.json');
-const { cards } = data;
+//const Flashcard = require('../models').Flashcard;
 
-//Random cards
-router.get('/', (req, res) => {
-    const numOfCards = cards.length;
-    const flashCardID = Math.floor(Math.random() * numOfCards);
-    res.redirect(`/cards/${flashCardID}?side=question`);
+/* Handler function to wrap each route. */
+function asyncHandler(cb) {
+    return async (req, res, next) => {
+        try {
+            await cb(req, res, next)
+        } catch (error) {
+            res.status(500).send(error);
+        }
+    }
+}
+
+router.get("/", (req, res) => {
+    res.render('cards', { title: 'Flashcards' });
 });
 
 //Get card based on id

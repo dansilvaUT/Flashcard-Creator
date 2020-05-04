@@ -13,10 +13,14 @@ app.set('view engine', 'pug');
 //require routes
 const indexRoute = require('./routes');
 const cardRoute = require('./routes/cards');
+const registerRoute = require('./routes/register');
+const loginRoute = require('./routes/login');
 
 //call routes
 app.use(indexRoute);
 app.use('/cards', cardRoute);
+app.use('/register', registerRoute);
+app.use('/login', loginRoute);
 
 //middleware
 app.use((req, res, next) => {

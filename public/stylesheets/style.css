@@ -6,7 +6,12 @@ body {
     background: #b1b4b5 url('../images/study-landing.jpg') no-repeat fixed center;
     background-size: cover;
     letter-spacing: 1.3px;
+    font-family: 'Maven Pro', sans-serif;
 }
+
+/************
+NAV STYLES
+*************/
 
 nav {
     background-color:#cc942d;
@@ -16,6 +21,12 @@ nav a {
     color: #fff;
     font-weight: 700;
 }
+
+nav a:hover {
+    color: black;
+}
+
+/*END NAV*/
 
 .main-content {
     padding-top: 70px;
@@ -88,16 +99,95 @@ nav a {
     background-color: #0697bf;
     border-color: #0697bf;
 }
-/*
+/*********************
+    LOGIN STYLES
+*********************/
+.login-content {
+    margin-top: 70px;
+}
 
+.login-form {
+    margin: 100px auto;
+    padding: 15px;
+    color: #fff;
+    width: 65%;
+    border-radius: 10px;
+    background-color: rgba(45, 204, 119, .7);
+    font-weight: 700;
+}
+
+.login-group {
+    max-width: 75%;
+    margin: 10px auto;
+}
+
+.btn-container-reg {
+    text-align: center;
+}
+
+.login-user-btn {
+    background-color: #2daacc;
+    border-color: #2daacc;
+    color: white;
+}
+
+.login-user-btn:hover {
+    background-color: #0697bf;
+    border-color: #0697bf;
+}
+
+/*********************
+    END LOGIN STYLES
+*********************/
+
+/******************
+    SIGN UP STYLES
+*******************/
+.sign-content {
+    margin-top: 70px;
+}
+
+.sign-up-form {
+    margin: 100px auto;
+    padding: 15px;
+    color: #fff;
+    width: 65%;
+    border-radius: 10px;
+    background-color: rgba(45, 170, 204, .7);
+    font-weight: 700;
+}
+
+.reg-group {
+    max-width: 75%;
+    margin: 10px auto;
+}
+
+.btn-container-reg {
+    text-align: center;
+}
+
+.register-btn {
+    background-color: #2dcc77;
+    border-color: #2dcc77;
+    color: white;
+}
+
+.register-btn:hover {
+    background-color: #09ad56;
+    border-color: #09ad56;
+}
+/*********************
+    END SIGN UP STYLES
+*********************/
+
+/***************
     ERROR STYLES
-
-*/
+****************/
 .error-content {
     text-align: center;
     background-color: rgba(144, 151, 158, .7);
-    padding: 15px;
-    margin-top: 20px;
+    padding: 30px;
+    margin-top: 100px;
     max-width: 60%;
 }
 
@@ -106,28 +196,48 @@ nav a {
     color: #bd4b4b;
 }
 
-.error-button {
+.error-anchor {
+    margin-top: 10px;
     display: block;
 }
+
+.error-btn {
+    background-color: #2daacc;
+    border-color: #2daacc;
+    color: #fff;
+}
+
+.error-btn:hover {
+    background-color: #0697bf;
+    border-color: #0697bf;
+}
 /*
-
     END ERROR STYLES
-
 */
+
+.main-content,
+.error-content,
+.card-content {
+    min-height: calc(100vh - 70px);
+}
 
 .footer {
     text-align: center;
+    height: 50px;
 }
 
 .text-muted p {
     color: #fff;
+    font-weight: 700;
 }
 
 @media only screen and (max-width: 1000px) {
     .app-desc,
     .error-content,
     .index-jumb,
-    .btn-container {
+    .btn-container,
+    .sign-up-form,
+    .reg-group {
         max-width: 100%;
     }
   }

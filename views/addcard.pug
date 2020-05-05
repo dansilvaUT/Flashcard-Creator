@@ -1,0 +1,17 @@
+extends layout
+
+block content
+    div.container.add-card-content
+        h1.add-card-header Card Route
+        form.login-form(action='/cards' method='POST')
+            .form-group.login-group
+                label(for='question') Question:
+                input#question.form-control(type='text' name='question')
+            .form-group.login-group
+                label(for='answer') Answer:
+                input#answer.form-control(type='text' name='answer')
+            //TODO add form for BUTTON to login/authenticate user
+            div.container.btn-container-reg
+                input.btn.add-question-btn(type="submit" value="Add Card")
+
+

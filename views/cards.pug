@@ -1,9 +1,10 @@
 extends layout
 
 block content
-    h1 Card Route
-    div.container.card-content
-        h2 
-        p
-
-
+    .container.card-content
+        h1.cards-header View Flashcards Here
+        //TODO render cards as decks. Each deck will be a link
+        //that redirects to a view to view cards from that deck
+        each card in cards
+            p=card.question
+            p=card.answer

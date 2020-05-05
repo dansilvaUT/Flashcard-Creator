@@ -181,6 +181,42 @@ nav a:hover {
     END SIGN UP STYLES
 *********************/
 
+/*********************
+    CARDS STYLES
+*********************/
+.card-content,
+.add-card-content {
+    margin-top: 70px;
+}
+
+.cards-header,
+.add-card-header,
+.sign-up-header,
+.login-header {
+    background-color: #24d1c5;
+    max-width: 50%;
+    padding: 10px;
+    text-align: center;
+    margin: auto;
+    color: #fff;
+    border-radius: 10px;
+}
+
+.add-question-btn {
+    background-color: #cc942d;
+    border-color: #cc942d; 
+    color: #fff;
+    padding: 8px 15px;
+}
+
+.add-question-btn:hover {
+    background-color: #e69a0e;
+    border-color: #e69a0e; 
+}
+/*********************
+    END CARDS STYLES
+*********************/
+
 /***************
     ERROR STYLES
 ****************/
@@ -218,6 +254,7 @@ nav a:hover {
 
 .main-content,
 .error-content,
+.add-content,
 .card-content {
     min-height: calc(100vh - 70px);
 }
@@ -240,5 +277,12 @@ nav a:hover {
     .sign-up-form,
     .reg-group {
         max-width: 100%;
+    }
+
+    .cards-header,
+    .add-card-header,
+    .sign-up-header,
+    .login-header {
+        max-width: 75%;
     }
   }

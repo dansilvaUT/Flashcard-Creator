@@ -3,9 +3,9 @@ const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 //require routes
 const indexRoute = require('./routes');
-const cardRoute = require('./routes/cards');
 const registerRoute = require('./routes/register');
 const loginRoute = require('./routes/login');
+const cardRoute = require('./routes/cards');
 const app = express();
 
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -17,9 +17,9 @@ app.set('view engine', 'pug');
 
 //call routes
 app.use(indexRoute);
-app.use('/cards', cardRoute);
 app.use('/register', registerRoute);
 app.use('/login', loginRoute);
+app.use('/cards', cardRoute);
 
 //middleware
 app.use((req, res, next) => {
@@ -33,6 +33,5 @@ app.use((err, req, res, next) => {
     res.status(err.status);
     res.render('error');
 });
-
 
 module.exports = app;

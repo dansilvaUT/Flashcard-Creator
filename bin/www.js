@@ -28,6 +28,7 @@ var server = http.createServer(app);
 
 sequelize.sync().then(() => {
   server.listen(port);
+  console.log('Flashcard App listening on port: ', port);
 });
 server.on('error', onError);
 server.on('listening', onListening);

@@ -13,6 +13,7 @@ app.use(cookieParser());
 app.use(express.json());
 
 app.use('/public', express.static('public'));
+
 app.set('view engine', 'pug');
 
 //call routes

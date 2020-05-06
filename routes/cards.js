@@ -25,9 +25,9 @@ router.get('/new', (req, res) => {
 });
 
 //Post a new question
-router.post('/', asyncHandler(async (req, res) => {
+router.post('/new', asyncHandler(async (req, res) => {
     const card = await Flashcard.create(req.body);
-    res.redirect('addcard');
+    res.redirect('/cards');
     // let card;
     // try {
     //     card = await Flashcard.create(req.body);

@@ -3,12 +3,13 @@ extends layout
 block content
     div.container.card-content
         h1.cards-header View Flashcards Here
-        each card in cards
-            div.container.card-list-master
-                div.container.card-list
-                    div.container.front
-                        label Question
+        div.container.card-div
+            each card in cards
+                div.container.card-list-master
+                    div.container.card-list
+                        div.container.front
+                            h1 Question
                             p=card.question
-                    div.container.back
-                        label Answer
+                        div.container.back
+                            h1 Answer
                             p=card.answer

@@ -219,26 +219,21 @@ nav a:hover {
     border-color: #e69a0e; 
 }
 
-/* .card-list-master {
+.card-div {
     background-color: rgba(24, 51, 58, .7);
     border-radius: 10px;
-    padding: 10px;
-    max-width: 75%;
+    padding: 10px 0;
+    margin-top: 70px;
 }
-
-.card-list {
-    background-color: #fff;
-    max-width: 60%;
-    border-radius: 10px;
-    margin: 10px auto;
-} */
+/*Card animations*/
 .card-list-master {
     height: 300px;
     perspective: 1000px;
-    background-color: rgba(24, 51, 58, .7);
     border-radius: 10px;
     padding: 10px;
     max-width: 75%;
+    background-color: #fff;
+    margin: 10px auto; 
   }
   
   .card-list {
@@ -248,8 +243,6 @@ nav a:hover {
     text-align: center;
     transition: transform 0.6s;
     transform-style: preserve-3d;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    margin: 10px 0;
   }
   
   .card-list-master:hover .card-list {
@@ -260,16 +253,15 @@ nav a:hover {
     position: absolute;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
+    margin: 10px auto;
   }
   
   .front {
-    background-color: #bbb;
-    color: black;
+    color: #000;
   }
   
   .back {
-    background-color: #2980b9;
-    color: white;
+    color: #000;
     transform: rotateY(180deg);
   }
 /*********************

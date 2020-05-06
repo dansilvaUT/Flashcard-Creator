@@ -3,16 +3,17 @@ extends layout
 block content
     div.container.sign-content
         h1.sign-up-header Register for An Account
-        form.sign-up-form()
+        form.sign-up-form(action='/register' method='POST')
             .form-group.reg-group
                 label(for='email') Email address:
-                input#email.form-control(type='email' placeholder='Enter email')
+                input#email.form-control(type='text' name='username' placeholder='Enter username')
             .form-group.reg-group
                 label(for='pwd') Password:
-                input#pwd.form-control(type='password' placeholder='Enter password')
+                input#pwd.form-control(type='password' name='password' placeholder='Enter password')
             .form-group.reg-group
                 label(for='pwd') Confirm Password:
-                input#pwd.form-control(type='password' placeholder='Confirm password')
+                input#pwd.form-control(type='password' name='confirmPassword' placeholder='Confirm password')
             //TODO add form for BUTTON to register user
             div.container.btn-container-reg
-                a.btn.register-btn(href='#' role='button') Register
+                //a.btn.register-btn(type='submit' role='button') Register
+                button.btn.register-btn(type='submit' role='button') Register

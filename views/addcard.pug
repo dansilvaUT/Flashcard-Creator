@@ -3,7 +3,7 @@ extends layout
 block content
     div.container.add-card-content
         h1.add-card-header Add a Flashcard
-        form.login-form(action='/cards' method='POST')
+        form.login-form(action='/cards/new' method='POST')
             .form-group.login-group
                 label(for='question') Question:
                 input#question.form-control(type='text' name='question')

@@ -233,7 +233,7 @@ nav a:hover {
     padding: 10px;
     max-width: 75%;
     background-color: #fff;
-    margin: 10px auto; 
+    margin: 50px auto; 
   }
   
   .card-list {
@@ -264,6 +264,17 @@ nav a:hover {
     color: #000;
     transform: rotateY(180deg);
   }
+
+/*End Animations*/
+.delete-btn-container {
+    background-color: blue;
+}
+
+.delete-btn-form {
+    position: fixed;
+}
+
+
 /*********************
     END CARDS STYLES
 *********************/

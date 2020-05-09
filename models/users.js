@@ -1,13 +1,21 @@
-'use strict';
-const Sequelize = require('sequelize');
+const mongoose = require('mongoose');
+const UserSchema = new mongoose.Schema({
+    email: {
+        type: String,
+        required: true,
+        trim: true
+    },
+    username: {
+        type: String,
+        required: true,
+        trim: true
+        //unique: true,
+    },
+    password: {
+        type: String,
+        required: true
+    }
+}, { timestamps: { createdAt: 'created_at' } });
 
-module.exports = (sequelize) => {
-    class User extends Sequelize.Model { }
-    User.init({
-        username: Sequelize.STRING,
-        password: Sequelize.STRING,
-        confirmPassword: Sequelize.STRING,
-    }, { sequelize });
-
-    return User;
-};
+const user = mongoose.model('User', UserSchema);
+module.exports = user;

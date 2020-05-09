@@ -1,12 +1,17 @@
-'use strict';
-const Sequelize = require('sequelize');
+const mongoose = require('mongoose');
+const FlashcardSchema = new mongoose.Schema({
+    question: {
+        type: String,
+        required: true,
+        trim: true
+    },
+    answer: {
+        type: String,
+        required: true,
+        trim: true
+    }
 
-module.exports = (sequelize) => {
-    class Flashcard extends Sequelize.Model { }
-    Flashcard.init({
-        question: Sequelize.STRING,
-        answer: Sequelize.STRING
-    }, { sequelize });
+},{ timestamps: { createdAt: 'created_at' } });
 
-    return Flashcard;
-};
+const flashcard = mongoose.model('Flashcard', FlashcardSchema);
+module.exports = flashcard;

@@ -13,3 +13,6 @@ block content
                         div.container.back
                             h1 Answer
                             p=card.answer
+                    div.container.delete-btn-container
+                        form.delete-btn-form(action='/delete')
+                            button.btn.btn-danger(type='submit', value='Submit') Delete Card

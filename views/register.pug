@@ -5,7 +5,10 @@ block content
         h1.sign-up-header Register for An Account
         form.sign-up-form(action='/register' method='POST')
             .form-group.reg-group
-                label(for='email') Email address:
+                label(for='email') Email:
+                input#email.form-control(type='email' name='email' placeholder='Enter email')
+            .form-group.reg-group
+                label(for='username') Username:
                 input#email.form-control(type='text' name='username' placeholder='Enter username')
             .form-group.reg-group
                 label(for='pwd') Password:
@@ -13,7 +16,6 @@ block content
             .form-group.reg-group
                 label(for='pwd') Confirm Password:
                 input#pwd.form-control(type='password' name='confirmPassword' placeholder='Confirm password')
-            //TODO add form for BUTTON to register user
             div.container.btn-container-reg
                 //a.btn.register-btn(type='submit' role='button') Register
                 button.btn.register-btn(type='submit' role='button') Register

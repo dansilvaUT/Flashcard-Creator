@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const Flashcard = require('../models').Flashcard;
+const Flashcard = require('../models/flashcard');
+
 
 /* Handler function to wrap each route. */
 function asyncHandler(cb) {
@@ -26,20 +27,17 @@ router.get('/new', (req, res) => {
 
 //Post a new question
 router.post('/new', asyncHandler(async (req, res) => {
-    const card = await Flashcard.create(req.body);
-    res.redirect('/cards');
-    // let card;
-    // try {
-    //     card = await Flashcard.create(req.body);
-    //     res.redirect("/cards/" + card.id);
-    // } catch (error) {
-    //     if (error.name === "SequelizeValidationError") {
-    //         card = await Flashcard.build(req.body);
-    //         res.render("card", { card, errors: error.errors, title: 'Flashcards' })
-    //     } else {
-    //         throw error;
-    //     }
-    // }
+    let flashcard;
+    if (req.body.question && req.body.answer) {
+        flashcard = await Flashcard.create(req.body);
+        //TODO implement flash message here.
+        res.redirect('/');
+
+    } else {
+        const error = new Error('All Fields required');
+        res.render('error', { error });
+    }
+
 }));
 
 module.exports = router;

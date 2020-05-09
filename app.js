@@ -1,12 +1,23 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
+const mongoose = require('mongoose');
 //require routes
 const indexRoute = require('./routes');
 const registerRoute = require('./routes/register');
 const loginRoute = require('./routes/login');
 const cardRoute = require('./routes/cards');
 const app = express();
+
+//Connect to DB
+mongoose.connect("mongodb://localhost:27017/flashcardflashstudy", {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+});
+
+const db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
@@ -34,5 +45,7 @@ app.use((err, req, res, next) => {
     res.status(err.status);
     res.render('error');
 });
+
+app.listen(8080, () => console.log('Flashcard server running on port 8080'));
 
 module.exports = app;

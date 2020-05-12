@@ -28,7 +28,7 @@ router.post('/', asyncHandler(async (req, res) => {
             res.render('error', { error: err });
         } else {
             user = await User.create(req.body);
-            res.redirect('/');
+            res.render('profile', { title: "Profile" });
         }
 
     } else {

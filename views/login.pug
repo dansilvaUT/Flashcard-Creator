@@ -3,13 +3,12 @@ extends layout
 block content
     div.container.login-content
         h1.login-header Login to Your Account
-        form.login-form()
+        form.login-form(action='/login' method='POST')
             .form-group.login-group
                 label(for='email') Email address:
                 input#email.form-control(type='email' placeholder='Enter email')
             .form-group.login-group
                 label(for='pwd') Password:
                 input#pwd.form-control(type='password' placeholder='Enter password')
-            //TODO add form for BUTTON to login/authenticate user
             div.container.btn-container-reg
-                a.btn.login-user-btn(href='#' role='button') Login
+                button.btn.login-user-btn(type='submit' role='button') Login
